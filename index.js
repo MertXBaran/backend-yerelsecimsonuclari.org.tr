@@ -5,7 +5,7 @@ const app = express();
 let CLEANEDDATA = {};
 async function getDatas() {
     try {
-        const request = await axios.get("https://secim2024.teimg.com/secim2024/data/president/cities.json");
+        const request = await axios.get("");
         const iller = request.data.data;
         CLEANEDDATA = {};
         for (let index = 0; index < iller.length; index++) {
@@ -60,7 +60,7 @@ getDatas().then(()=>{
 let GENEL = {};
 async function getDatas2() {
     try {
-        const request = await axios.get("https://secim2024.teimg.com/secim2024/data/president/general.json");
+        const request = await axios.get("");
         const data = request.data.data;
         GENEL = {};
         GENEL.toplamsandik = Number(data.tbc);
